@@ -4,4 +4,11 @@
 
 Provides easy access to AdmZip.
 
-NOTE: Not yet ready for production.
+Create a ZIP file from a single file:
+createZipFromFile("thing.txt", "something.zip");
+
+Create ZIP file from multiple files:
+createZipFromFiles([ "this.txt", "that.txt" ], "something.zip");
+
+Extract a ZIP file (from path -> to path):
+extractZip("something.zip", "some/folder");
