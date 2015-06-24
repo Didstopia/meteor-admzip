@@ -28,9 +28,10 @@ Tinytest.add('AdmZip - Extract a ZIP file', function (test)
 	createZipFromFile("test.txt", "test.zip");
 
 	// Read and extract the ZIP file
-	extractZip('test.zip', 'test/');
-
-	// Test if the extracted file exists
-	var fs = Npm.require('fs');
-	test.equal(fs.existsSync('test/test.txt'), true, "Test file does not exist, extract failed?");
+	extractZip('test.zip', 'test/', true, function(err)
+	{
+		// Test if the extracted file exists
+		var fs = Npm.require('fs');
+		test.equal(fs.existsSync('test/test.txt'), true, "Test file does not exist, extract failed?");
+	});
 });

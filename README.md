@@ -10,5 +10,8 @@ createZipFromFile("thing.txt", "something.zip");
 Create ZIP file from multiple files:
 createZipFromFiles([ "this.txt", "that.txt" ], "something.zip");
 
-Extract a ZIP file (from path -> to path):
-extractZip("something.zip", "some/folder");
+Extract a ZIP file (from path, to path, overwrite, callback):
+extractZip("something.zip", "some/folder", true, function(error)
+{
+	if (error) console.log("Error extracting ZIP file: " + error);
+});

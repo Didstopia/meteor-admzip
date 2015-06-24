@@ -22,8 +22,8 @@ createZipFromFiles = function(filePaths, toPath)
 }
 
 // Read and extract the ZIP file
-extractZip = function(fromPath, toPath)
+extractZip = function(fromPath, toPath, overwrite, callback)
 {
 	var zip = new AdmZip(fromPath);	
-	zip.extractAllTo(toPath, true);
+	zip.extractAllToAsync(toPath, overwrite, callback);
 }
