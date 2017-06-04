@@ -2,7 +2,7 @@ Package.describe(
 {
   name: 'didstopia:admzip',
   summary: 'Provides easy access to AdmZip.',
-  version: '0.0.5',
+  version: '0.1.0',
   git: 'https://github.com/Didstopia/meteor-admzip.git',
   documentation: 'README.md',
   packages:

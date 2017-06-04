@@ -1,7 +1,7 @@
-sudo: required
 language: node_js
 node_js:
-- "0.10"
+  - "7"
 before_install:
-- "curl -L http://git.io/ejPSng | /bin/sh"
-
+  - "curl -L https://raw.githubusercontent.com/arunoda/travis-ci-meteor-packages/master/configure.sh | /bin/sh"
+before_script:
+  - "export PATH=$HOME/.meteor:$PATH"
